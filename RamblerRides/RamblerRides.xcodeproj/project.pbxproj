@@ -1,0 +1,515 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF67D99C1BF57D17003E898C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF67D99B1BF57D17003E898C /* AppDelegate.swift */; };
+		EF67D99E1BF57D17003E898C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF67D99D1BF57D17003E898C /* ViewController.swift */; };
+		EF67D9A11BF57D17003E898C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF67D99F1BF57D17003E898C /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
+		EF67D9A31BF57D17003E898C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF67D9A21BF57D17003E898C /* Assets.xcassets */; };
+		EF67D9A61BF57D17003E898C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF67D9A41BF57D17003E898C /* LaunchScreen.storyboard */; };
+		EF67D9B11BF57D17003E898C /* RamblerRidesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF67D9B01BF57D17003E898C /* RamblerRidesTests.swift */; };
+		EF67D9BC1BF57D17003E898C /* RamblerRidesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF67D9BB1BF57D17003E898C /* RamblerRidesUITests.swift */; };
+		EF67D9CC1BF58C4B003E898C /* LakeshoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF67D9CB1BF58C4B003E898C /* LakeshoreController.swift */; settings = {ASSET_TAGS = (); }; };
+		EF67D9CE1BF58D9A003E898C /* WatertowerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF67D9CD1BF58D9A003E898C /* WatertowerController.swift */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF67D9AD1BF57D17003E898C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF67D9901BF57D17003E898C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF67D9971BF57D17003E898C;
+			remoteInfo = RamblerRides;
+		};
+		EF67D9B81BF57D17003E898C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF67D9901BF57D17003E898C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF67D9971BF57D17003E898C;
+			remoteInfo = RamblerRides;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EF67D9981BF57D17003E898C /* RamblerRides.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RamblerRides.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF67D99B1BF57D17003E898C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF67D99D1BF57D17003E898C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EF67D9A01BF57D17003E898C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF67D9A21BF57D17003E898C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF67D9A51BF57D17003E898C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF67D9A71BF57D17003E898C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF67D9AC1BF57D17003E898C /* RamblerRidesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RamblerRidesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF67D9B01BF57D17003E898C /* RamblerRidesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RamblerRidesTests.swift; sourceTree = "<group>"; };
+		EF67D9B21BF57D17003E898C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF67D9B71BF57D17003E898C /* RamblerRidesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RamblerRidesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF67D9BB1BF57D17003E898C /* RamblerRidesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RamblerRidesUITests.swift; sourceTree = "<group>"; };
+		EF67D9BD1BF57D17003E898C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF67D9CB1BF58C4B003E898C /* LakeshoreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LakeshoreController.swift; sourceTree = "<group>"; };
+		EF67D9CD1BF58D9A003E898C /* WatertowerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatertowerController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF67D9951BF57D17003E898C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF67D9A91BF57D17003E898C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF67D9B41BF57D17003E898C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF67D98F1BF57D17003E898C = {
+			isa = PBXGroup;
+			children = (
+				EF67D99A1BF57D17003E898C /* RamblerRides */,
+				EF67D9AF1BF57D17003E898C /* RamblerRidesTests */,
+				EF67D9BA1BF57D17003E898C /* RamblerRidesUITests */,
+				EF67D9991BF57D17003E898C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF67D9991BF57D17003E898C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF67D9981BF57D17003E898C /* RamblerRides.app */,
+				EF67D9AC1BF57D17003E898C /* RamblerRidesTests.xctest */,
+				EF67D9B71BF57D17003E898C /* RamblerRidesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF67D99A1BF57D17003E898C /* RamblerRides */ = {
+			isa = PBXGroup;
+			children = (
+				EF67D99B1BF57D17003E898C /* AppDelegate.swift */,
+				EF67D99D1BF57D17003E898C /* ViewController.swift */,
+				EF67D99F1BF57D17003E898C /* Main.storyboard */,
+				EF67D9A21BF57D17003E898C /* Assets.xcassets */,
+				EF67D9A41BF57D17003E898C /* LaunchScreen.storyboard */,
+				EF67D9A71BF57D17003E898C /* Info.plist */,
+				EF67D9CB1BF58C4B003E898C /* LakeshoreController.swift */,
+				EF67D9CD1BF58D9A003E898C /* WatertowerController.swift */,
+			);
+			path = RamblerRides;
+			sourceTree = "<group>";
+		};
+		EF67D9AF1BF57D17003E898C /* RamblerRidesTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF67D9B01BF57D17003E898C /* RamblerRidesTests.swift */,
+				EF67D9B21BF57D17003E898C /* Info.plist */,
+			);
+			path = RamblerRidesTests;
+			sourceTree = "<group>";
+		};
+		EF67D9BA1BF57D17003E898C /* RamblerRidesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EF67D9BB1BF57D17003E898C /* RamblerRidesUITests.swift */,
+				EF67D9BD1BF57D17003E898C /* Info.plist */,
+			);
+			path = RamblerRidesUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF67D9971BF57D17003E898C /* RamblerRides */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF67D9C01BF57D17003E898C /* Build configuration list for PBXNativeTarget "RamblerRides" */;
+			buildPhases = (
+				EF67D9941BF57D17003E898C /* Sources */,
+				EF67D9951BF57D17003E898C /* Frameworks */,
+				EF67D9961BF57D17003E898C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RamblerRides;
+			productName = RamblerRides;
+			productReference = EF67D9981BF57D17003E898C /* RamblerRides.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF67D9AB1BF57D17003E898C /* RamblerRidesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF67D9C31BF57D17003E898C /* Build configuration list for PBXNativeTarget "RamblerRidesTests" */;
+			buildPhases = (
+				EF67D9A81BF57D17003E898C /* Sources */,
+				EF67D9A91BF57D17003E898C /* Frameworks */,
+				EF67D9AA1BF57D17003E898C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF67D9AE1BF57D17003E898C /* PBXTargetDependency */,
+			);
+			name = RamblerRidesTests;
+			productName = RamblerRidesTests;
+			productReference = EF67D9AC1BF57D17003E898C /* RamblerRidesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EF67D9B61BF57D17003E898C /* RamblerRidesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF67D9C61BF57D17003E898C /* Build configuration list for PBXNativeTarget "RamblerRidesUITests" */;
+			buildPhases = (
+				EF67D9B31BF57D17003E898C /* Sources */,
+				EF67D9B41BF57D17003E898C /* Frameworks */,
+				EF67D9B51BF57D17003E898C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF67D9B91BF57D17003E898C /* PBXTargetDependency */,
+			);
+			name = RamblerRidesUITests;
+			productName = RamblerRidesUITests;
+			productReference = EF67D9B71BF57D17003E898C /* RamblerRidesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF67D9901BF57D17003E898C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				KnownAssetTags = (
+					lakeshore,
+				);
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = LUCCS;
+				TargetAttributes = {
+					EF67D9971BF57D17003E898C = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					EF67D9AB1BF57D17003E898C = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = EF67D9971BF57D17003E898C;
+					};
+					EF67D9B61BF57D17003E898C = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = EF67D9971BF57D17003E898C;
+					};
+				};
+			};
+			buildConfigurationList = EF67D9931BF57D17003E898C /* Build configuration list for PBXProject "RamblerRides" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF67D98F1BF57D17003E898C;
+			productRefGroup = EF67D9991BF57D17003E898C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF67D9971BF57D17003E898C /* RamblerRides */,
+				EF67D9AB1BF57D17003E898C /* RamblerRidesTests */,
+				EF67D9B61BF57D17003E898C /* RamblerRidesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF67D9961BF57D17003E898C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF67D9A61BF57D17003E898C /* LaunchScreen.storyboard in Resources */,
+				EF67D9A31BF57D17003E898C /* Assets.xcassets in Resources */,
+				EF67D9A11BF57D17003E898C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF67D9AA1BF57D17003E898C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF67D9B51BF57D17003E898C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF67D9941BF57D17003E898C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF67D99E1BF57D17003E898C /* ViewController.swift in Sources */,
+				EF67D9CE1BF58D9A003E898C /* WatertowerController.swift in Sources */,
+				EF67D99C1BF57D17003E898C /* AppDelegate.swift in Sources */,
+				EF67D9CC1BF58C4B003E898C /* LakeshoreController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF67D9A81BF57D17003E898C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF67D9B11BF57D17003E898C /* RamblerRidesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF67D9B31BF57D17003E898C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF67D9BC1BF57D17003E898C /* RamblerRidesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF67D9AE1BF57D17003E898C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF67D9971BF57D17003E898C /* RamblerRides */;
+			targetProxy = EF67D9AD1BF57D17003E898C /* PBXContainerItemProxy */;
+		};
+		EF67D9B91BF57D17003E898C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF67D9971BF57D17003E898C /* RamblerRides */;
+			targetProxy = EF67D9B81BF57D17003E898C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EF67D99F1BF57D17003E898C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF67D9A01BF57D17003E898C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF67D9A41BF57D17003E898C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF67D9A51BF57D17003E898C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF67D9BE1BF57D17003E898C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EF67D9BF1BF57D17003E898C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF67D9C11BF57D17003E898C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RamblerRides/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.LUCCS.RamblerRides;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EF67D9C21BF57D17003E898C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RamblerRides/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.LUCCS.RamblerRides;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EF67D9C41BF57D17003E898C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RamblerRidesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.LUCCS.RamblerRidesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RamblerRides.app/RamblerRides";
+			};
+			name = Debug;
+		};
+		EF67D9C51BF57D17003E898C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RamblerRidesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.LUCCS.RamblerRidesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RamblerRides.app/RamblerRides";
+			};
+			name = Release;
+		};
+		EF67D9C71BF57D17003E898C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RamblerRidesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.LUCCS.RamblerRidesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = RamblerRides;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		EF67D9C81BF57D17003E898C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RamblerRidesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.LUCCS.RamblerRidesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = RamblerRides;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF67D9931BF57D17003E898C /* Build configuration list for PBXProject "RamblerRides" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF67D9BE1BF57D17003E898C /* Debug */,
+				EF67D9BF1BF57D17003E898C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF67D9C01BF57D17003E898C /* Build configuration list for PBXNativeTarget "RamblerRides" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF67D9C11BF57D17003E898C /* Debug */,
+				EF67D9C21BF57D17003E898C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EF67D9C31BF57D17003E898C /* Build configuration list for PBXNativeTarget "RamblerRidesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF67D9C41BF57D17003E898C /* Debug */,
+				EF67D9C51BF57D17003E898C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EF67D9C61BF57D17003E898C /* Build configuration list for PBXNativeTarget "RamblerRidesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF67D9C71BF57D17003E898C /* Debug */,
+				EF67D9C81BF57D17003E898C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF67D9901BF57D17003E898C /* Project object */;
+}
