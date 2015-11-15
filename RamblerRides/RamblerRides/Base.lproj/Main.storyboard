@@ -47,10 +47,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
+        <!--Watertower Controller-->
         <scene sceneID="7Zk-8B-siA">
             <objects>
-                <viewController id="n7a-Rr-cBX" sceneMemberID="viewController">
+                <viewController id="n7a-Rr-cBX" customClass="WatertowerController" customModule="RamblerRides" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="V29-6D-9Ov"/>
                         <viewControllerLayoutGuide type="bottom" id="Nf4-37-oiZ"/>

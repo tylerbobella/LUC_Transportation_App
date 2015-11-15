@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import PromiseKit
 
 class CTA: NSObject, NSXMLParserDelegate {
 
@@ -27,52 +28,106 @@ class CTA: NSObject, NSXMLParserDelegate {
     }
     
     // Have to handle async call properly
-    func getTrain(campus: String, completionHandler: (NSDictionary?, NSError?) -> ()) {
-        trainData(campus, completionHandler: completionHandler)
+    func getTrain(campus: String, completionHandler: (NSDictionary?, ErrorType?) -> ()) {
+        if campus == "lakeshore" {
+            lscTrainPromises(completionHandler)
+        } else if campus == "watertower" {
+            wtcTrainPromises(completionHandler)
+        }
     }
     
-    private func trainData(campus: String, completionHandler: (NSDictionary?, NSError?) -> ()) -> () {
-        print("Hit method")
-        if campus == "lakeshore" {
-            //TODO: Refactor this!
-            //Inbound times
+    private func lscInboundTrain() -> Promise<AnyObject> {
+        return Promise { fulfill, reject in
             Alamofire.request(.GET, "\(baseTrainUrl)&stpid=\(loyolaLSCRInbound)").response { (request, response, data, error) in
-                let parser = NSXMLParser(data: data!)
-                parser.delegate = self
-                parser.parse()
-                completionHandler(self.parsedDictionary, error)
-            }
-            
-            //Outbound times
-            Alamofire.request(.GET, "\(baseTrainUrl)&stpid=\(loyolaLSCROutbound)").response { (request, response, data, error) in
-                let parser = NSXMLParser(data: data!)
-                parser.delegate = self
-                parser.parse()
-                completionHandler(self.parsedDictionary, error)
-            }
-            
-        }
-        
-        if campus == "watertower" {
-            //TODO: Refactor this!
-            //Inbound times
-            Alamofire.request(.GET, "\(baseTrainUrl)&stpid=\(loyolaWTCInbound)").response { (request, response, data, error) in
-                let parser = NSXMLParser(data: data!)
-                parser.delegate = self
-                parser.parse()
-                completionHandler(self.parsedDictionary, error)
-            }
-            
-            //Outbound times
-            Alamofire.request(.GET, "\(baseTrainUrl)&stpid=\(loyolaWTCOutbound)").response { (request, response, data, error) in
-                let parser = NSXMLParser(data: data!)
-                parser.delegate = self
-                parser.parse()
-                completionHandler(self.parsedDictionary, error)
+                if error == nil {
+                    let parser = NSXMLParser(data: data!)
+                    parser.delegate = self
+                    parser.parse()
+                    fulfill(self.parsedDictionary)
+                } else {
+                    reject(error!)
+                }
             }
         }
-        
     }
+    
+    private func lscOutboundTrain() -> Promise<AnyObject> {
+        return Promise { fulfill, reject in
+            Alamofire.request(.GET, "\(baseTrainUrl)&stpid=\(loyolaLSCROutbound)").response { (request, response, data, error) in
+                if error == nil {
+                    let parser = NSXMLParser(data: data!)
+                    parser.delegate = self
+                    parser.parse()
+                    fulfill(self.parsedDictionary)
+                } else {
+                    reject(error!)
+                }
+            }
+        }
+    }
+    
+    private func lscTrainPromises(completionHandler: (NSDictionary?, ErrorType?) -> ()) -> () {
+        var lscDictionary = [String: AnyObject]()
+
+        firstly {
+            return lscInboundTrain()
+            }.then { (inbound: AnyObject) in
+                lscDictionary["InboundTrain"] = inbound
+                return self.lscOutboundTrain()
+            }.then{ (outbound: AnyObject) -> Void in
+                lscDictionary["OutboundTrain"] = outbound
+                completionHandler(lscDictionary, nil)
+            }.error { error in
+                completionHandler(nil, error)
+        }
+    }
+    
+    private func wtcInboundTrain() -> Promise<AnyObject> {
+        return Promise { fulfill, reject in
+            Alamofire.request(.GET, "\(baseTrainUrl)&stpid=\(loyolaWTCInbound)").response { (request, response, data, error) in
+                if error == nil {
+                    let parser = NSXMLParser(data: data!)
+                    parser.delegate = self
+                    parser.parse()
+                    fulfill(self.parsedDictionary)
+                } else {
+                    reject(error!)
+                }
+            }
+        }
+    }
+    
+    private func wtcOutboundTrain() -> Promise<AnyObject> {
+        return Promise { fulfill, reject in
+            Alamofire.request(.GET, "\(baseTrainUrl)&stpid=\(loyolaWTCOutbound)").response { (request, response, data, error) in
+                if error == nil {
+                    let parser = NSXMLParser(data: data!)
+                    parser.delegate = self
+                    parser.parse()
+                    fulfill(self.parsedDictionary)
+                } else {
+                    reject(error!)
+                }
+            }
+        }
+    }
+    
+    private func wtcTrainPromises(completionHandler: (NSDictionary?, ErrorType?) -> ()) -> () {
+        var wtcDictionary = [String: AnyObject]()
+        
+        firstly {
+            return wtcInboundTrain()
+            }.then { (inbound: AnyObject) in
+                wtcDictionary["InboundTrain"] = inbound
+                return self.wtcOutboundTrain()
+            }.then{ (outbound: AnyObject) -> Void in
+                wtcDictionary["OutboundTrain"] = outbound
+                completionHandler(wtcDictionary, nil)
+            }.error { error in
+                completionHandler(nil, error)
+        }
+    }
+    
     
     func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         lastParsed = elementName
