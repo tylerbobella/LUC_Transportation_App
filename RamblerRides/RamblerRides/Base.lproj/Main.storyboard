@@ -63,7 +63,7 @@
                                 <rect key="frame" x="95" y="195" width="410" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -75,10 +75,10 @@
             </objects>
             <point key="canvasLocation" x="1061" y="826"/>
         </scene>
-        <!--View Controller-->
+        <!--Lakeshore Controller-->
         <scene sceneID="HFT-oq-lSy">
             <objects>
-                <viewController id="ue0-at-RM4" sceneMemberID="viewController">
+                <viewController id="ue0-at-RM4" customClass="LakeshoreController" customModule="RamblerRides" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="b4G-a2-g4s"/>
                         <viewControllerLayoutGuide type="bottom" id="vu4-v8-CCB"/>
@@ -91,7 +91,7 @@
                                 <rect key="frame" x="102" y="185" width="397" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>

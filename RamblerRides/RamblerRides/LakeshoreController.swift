@@ -9,6 +9,15 @@
 import UIKit
 
 class LakeshoreController: UIViewController {
-
-
+    
+    let cta = CTA()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        cta.getTrain("lakeshore") { response, error in
+            print(response)
+        }
+    }
+    
 }

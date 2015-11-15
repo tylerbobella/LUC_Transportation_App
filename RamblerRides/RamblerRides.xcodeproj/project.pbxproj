@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		052D981B6D106DDD8B233BDD /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4818211612084566851AE1B4 /* Pods.framework */; };
 		EF67D99C1BF57D17003E898C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF67D99B1BF57D17003E898C /* AppDelegate.swift */; };
 		EF67D99E1BF57D17003E898C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF67D99D1BF57D17003E898C /* ViewController.swift */; };
 		EF67D9A11BF57D17003E898C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF67D99F1BF57D17003E898C /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
@@ -16,6 +17,7 @@
 		EF67D9BC1BF57D17003E898C /* RamblerRidesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF67D9BB1BF57D17003E898C /* RamblerRidesUITests.swift */; };
 		EF67D9CC1BF58C4B003E898C /* LakeshoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF67D9CB1BF58C4B003E898C /* LakeshoreController.swift */; settings = {ASSET_TAGS = (); }; };
 		EF67D9CE1BF58D9A003E898C /* WatertowerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF67D9CD1BF58D9A003E898C /* WatertowerController.swift */; settings = {ASSET_TAGS = (); }; };
+		EF9F0A331BF83B430053E36D /* CTA.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9F0A321BF83B430053E36D /* CTA.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4818211612084566851AE1B4 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F72E08CD73EBE086C1E6820 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		721989A11EFF17DB08FD7710 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EF67D9981BF57D17003E898C /* RamblerRides.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RamblerRides.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF67D99B1BF57D17003E898C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF67D99D1BF57D17003E898C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +56,8 @@
 		EF67D9BD1BF57D17003E898C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF67D9CB1BF58C4B003E898C /* LakeshoreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LakeshoreController.swift; sourceTree = "<group>"; };
 		EF67D9CD1BF58D9A003E898C /* WatertowerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatertowerController.swift; sourceTree = "<group>"; };
+		EF9F0A321BF83B430053E36D /* CTA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTA.swift; sourceTree = "<group>"; };
+		EF9F0A341BF840EE0053E36D /* RamblerRides-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RamblerRides-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				052D981B6D106DDD8B233BDD /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +86,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01B3BDEEA3564E4246CC5210 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4818211612084566851AE1B4 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5844F31F6A52D4F86287DA3B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4F72E08CD73EBE086C1E6820 /* Pods.debug.xcconfig */,
+				721989A11EFF17DB08FD7710 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EF67D98F1BF57D17003E898C = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +110,8 @@
 				EF67D9AF1BF57D17003E898C /* RamblerRidesTests */,
 				EF67D9BA1BF57D17003E898C /* RamblerRidesUITests */,
 				EF67D9991BF57D17003E898C /* Products */,
+				5844F31F6A52D4F86287DA3B /* Pods */,
+				01B3BDEEA3564E4246CC5210 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +136,8 @@
 				EF67D9A71BF57D17003E898C /* Info.plist */,
 				EF67D9CB1BF58C4B003E898C /* LakeshoreController.swift */,
 				EF67D9CD1BF58D9A003E898C /* WatertowerController.swift */,
+				EF9F0A321BF83B430053E36D /* CTA.swift */,
+				EF9F0A341BF840EE0053E36D /* RamblerRides-Bridging-Header.h */,
 			);
 			path = RamblerRides;
 			sourceTree = "<group>";
@@ -138,9 +167,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF67D9C01BF57D17003E898C /* Build configuration list for PBXNativeTarget "RamblerRides" */;
 			buildPhases = (
+				00ECE31095C652505B2C2837 /* Check Pods Manifest.lock */,
 				EF67D9941BF57D17003E898C /* Sources */,
 				EF67D9951BF57D17003E898C /* Frameworks */,
 				EF67D9961BF57D17003E898C /* Resources */,
+				2E5602F946EA7ED1B887459E /* Embed Pods Frameworks */,
+				2146EABE800914C77CF8B938 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,6 +228,7 @@
 				KnownAssetTags = (
 					lakeshore,
 				);
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = LUCCS;
 				TargetAttributes = {
@@ -259,6 +292,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		00ECE31095C652505B2C2837 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2146EABE800914C77CF8B938 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2E5602F946EA7ED1B887459E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EF67D9941BF57D17003E898C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -266,6 +347,7 @@
 			files = (
 				EF67D99E1BF57D17003E898C /* ViewController.swift in Sources */,
 				EF67D9CE1BF58D9A003E898C /* WatertowerController.swift in Sources */,
+				EF9F0A331BF83B430053E36D /* CTA.swift in Sources */,
 				EF67D99C1BF57D17003E898C /* AppDelegate.swift in Sources */,
 				EF67D9CC1BF58C4B003E898C /* LakeshoreController.swift in Sources */,
 			);
@@ -405,23 +487,30 @@
 		};
 		EF67D9C11BF57D17003E898C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F72E08CD73EBE086C1E6820 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = RamblerRides/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LUCCS.RamblerRides;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RamblerRides/RamblerRides-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		EF67D9C21BF57D17003E898C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 721989A11EFF17DB08FD7710 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = RamblerRides/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LUCCS.RamblerRides;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RamblerRides/RamblerRides-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -492,6 +581,7 @@
 				EF67D9C21BF57D17003E898C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF67D9C31BF57D17003E898C /* Build configuration list for PBXNativeTarget "RamblerRidesTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +590,7 @@
 				EF67D9C51BF57D17003E898C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF67D9C61BF57D17003E898C /* Build configuration list for PBXNativeTarget "RamblerRidesUITests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +599,7 @@
 				EF67D9C81BF57D17003E898C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
