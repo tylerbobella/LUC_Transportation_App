@@ -1,0 +1,15 @@
+
+/* Class = "UIButton"; accessibilityIdentifier = "lakeshore"; ObjectID = "FV9-b1-i8Q"; */
+"FV9-b1-i8Q.accessibilityIdentifier" = "lakeshore";
+
+/* Class = "UIButton"; normalTitle = "Lake Shore Campus"; ObjectID = "FV9-b1-i8Q"; */
+"FV9-b1-i8Q.normalTitle" = "Lake Shore Campus";
+
+/* Class = "UIButton"; normalTitle = "Water Tower Campus"; ObjectID = "Fk8-Rh-KOe"; */
+"Fk8-Rh-KOe.normalTitle" = "Water Tower Campus";
+
+/* Class = "UILabel"; text = "This is watertower view. Update with data from model"; ObjectID = "W7P-34-d0t"; */
+"W7P-34-d0t.text" = "";
+
+/* Class = "UILabel"; text = "This is lakeshore view. Update with data from model"; ObjectID = "m9L-Us-2iQ"; */
+"m9L-Us-2iQ.text" = "";

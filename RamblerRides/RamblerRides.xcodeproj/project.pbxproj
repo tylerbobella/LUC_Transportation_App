@@ -10,14 +10,14 @@
 		052D981B6D106DDD8B233BDD /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4818211612084566851AE1B4 /* Pods.framework */; };
 		EF67D99C1BF57D17003E898C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF67D99B1BF57D17003E898C /* AppDelegate.swift */; };
 		EF67D99E1BF57D17003E898C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF67D99D1BF57D17003E898C /* ViewController.swift */; };
-		EF67D9A11BF57D17003E898C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF67D99F1BF57D17003E898C /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
+		EF67D9A11BF57D17003E898C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF67D99F1BF57D17003E898C /* Main.storyboard */; };
 		EF67D9A31BF57D17003E898C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF67D9A21BF57D17003E898C /* Assets.xcassets */; };
 		EF67D9A61BF57D17003E898C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF67D9A41BF57D17003E898C /* LaunchScreen.storyboard */; };
 		EF67D9B11BF57D17003E898C /* RamblerRidesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF67D9B01BF57D17003E898C /* RamblerRidesTests.swift */; };
 		EF67D9BC1BF57D17003E898C /* RamblerRidesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF67D9BB1BF57D17003E898C /* RamblerRidesUITests.swift */; };
-		EF67D9CC1BF58C4B003E898C /* LakeshoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF67D9CB1BF58C4B003E898C /* LakeshoreController.swift */; settings = {ASSET_TAGS = (); }; };
-		EF67D9CE1BF58D9A003E898C /* WatertowerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF67D9CD1BF58D9A003E898C /* WatertowerController.swift */; settings = {ASSET_TAGS = (); }; };
-		EF9F0A331BF83B430053E36D /* CTA.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9F0A321BF83B430053E36D /* CTA.swift */; settings = {ASSET_TAGS = (); }; };
+		EF67D9CC1BF58C4B003E898C /* LakeshoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF67D9CB1BF58C4B003E898C /* LakeshoreController.swift */; };
+		EF67D9CE1BF58D9A003E898C /* WatertowerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF67D9CD1BF58D9A003E898C /* WatertowerController.swift */; };
+		EF9F0A331BF83B430053E36D /* CTA.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9F0A321BF83B430053E36D /* CTA.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +41,7 @@
 		4818211612084566851AE1B4 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F72E08CD73EBE086C1E6820 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		721989A11EFF17DB08FD7710 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		D11E82CF1C0CD92B00BABDF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		EF67D9981BF57D17003E898C /* RamblerRides.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RamblerRides.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF67D99B1BF57D17003E898C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF67D99D1BF57D17003E898C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -389,6 +390,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				EF67D9A01BF57D17003E898C /* Base */,
+				D11E82CF1C0CD92B00BABDF8 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
