@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,8 +18,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="lakeshore" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FV9-b1-i8Q">
-                                <rect key="frame" x="232" y="151" width="137" height="30"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34a-Dx-GgF">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <animations/>
+                                <items>
+                                    <navigationItem title="Rambler Rides" id="Et1-zz-sFY"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" restorationIdentifier="watertower" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fk8-Rh-KOe">
+                                <rect key="frame" x="20" y="139" width="580" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="R18-ip-y0a"/>
+                                    <constraint firstAttribute="width" constant="148" id="hGt-b0-MgS"/>
+                                    <constraint firstAttribute="width" constant="147" id="knD-Dq-zln"/>
+                                </constraints>
+                                <state key="normal" title="Water Tower Campus"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="hGt-b0-MgS"/>
+                                        <exclude reference="knD-Dq-zln"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="chooseCampus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rmd-Gj-etF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" restorationIdentifier="lakeshore" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FV9-b1-i8Q">
+                                <rect key="frame" x="20" y="101" width="580" height="30"/>
                                 <animations/>
                                 <accessibility key="accessibilityConfiguration" identifier="lakeshore"/>
                                 <state key="normal" title="Lake Shore Campus"/>
@@ -25,27 +53,37 @@
                                     <action selector="chooseCampus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HqX-Xu-rdk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="watertower" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fk8-Rh-KOe">
-                                <rect key="frame" x="227" y="333" width="147" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Water Tower Campus"/>
-                                <connections>
-                                    <action selector="chooseCampus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rmd-Gj-etF"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="34a-Dx-GgF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="17Q-mf-g1W"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Fk8-Rh-KOe" secondAttribute="bottom" constant="306" id="EdV-Kf-H5q"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Fk8-Rh-KOe" secondAttribute="bottom" constant="431" id="TgN-p4-fhG"/>
+                            <constraint firstItem="Fk8-Rh-KOe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="aRz-gV-3wZ"/>
+                            <constraint firstItem="34a-Dx-GgF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="kgI-4b-FWB"/>
+                            <constraint firstItem="FV9-b1-i8Q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="m9t-ZJ-ipt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="34a-Dx-GgF" secondAttribute="trailing" constant="-20" id="rHL-PQ-y1I"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Fk8-Rh-KOe" secondAttribute="trailing" constant="-20" id="rhv-Kn-LyW"/>
+                            <constraint firstItem="FV9-b1-i8Q" firstAttribute="top" secondItem="34a-Dx-GgF" secondAttribute="bottom" constant="37" id="rkQ-vL-BIT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FV9-b1-i8Q" secondAttribute="trailing" constant="-20" id="y7I-wk-KlL"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="EdV-Kf-H5q"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outletCollection property="campuses" destination="FV9-b1-i8Q" collectionClass="NSMutableArray" id="2kf-dy-Nfm"/>
                         <outletCollection property="campuses" destination="Fk8-Rh-KOe" collectionClass="NSMutableArray" id="vjf-cy-yGL"/>
-                        <segue destination="ue0-at-RM4" kind="show" identifier="lakeshore" id="3A0-Bw-oLl"/>
-                        <segue destination="n7a-Rr-cBX" kind="show" identifier="watertower" id="rz6-bn-KPA"/>
+                        <segue destination="ue0-at-RM4" kind="presentation" identifier="lakeshore" id="3A0-Bw-oLl"/>
+                        <segue destination="n7a-Rr-cBX" kind="presentation" identifier="watertower" id="rz6-bn-KPA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="120" y="275"/>
         </scene>
         <!--Watertower Controller-->
         <scene sceneID="7Zk-8B-siA">
@@ -59,21 +97,168 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is watertower view. Update with data from model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7P-34-d0t">
-                                <rect key="frame" x="95" y="195" width="410" height="21"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gij-no-7Zo">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="WBL-1W-GMw"/>
+                                    <constraint firstAttribute="width" constant="600" id="bzc-xL-Qj0"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="WaterTower Schedule" id="rDr-9p-1ne">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="FHE-iE-cUF">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="modal" id="RgK-ln-BAr"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="WBL-1W-GMw"/>
+                                        <exclude reference="bzc-xL-Qj0"/>
+                                    </mask>
+                                </variation>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Bus on the way" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZ1-qu-PUh">
+                                <rect key="frame" x="333" y="157" width="267" height="31"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="167" id="gOH-gi-c9P"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="gOH-gi-c9P"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bus Leavin soon" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txI-Va-Sb8">
+                                <rect key="frame" x="0.0" y="157" width="268" height="31"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <switch opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="64C-IJ-asQ">
+                                <rect key="frame" x="276" y="157" width="51" height="31"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="countingDown:" destination="n7a-Rr-cBX" eventType="valueChanged" id="J9d-Yv-mO8"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" text="buscountdown view" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPO-eU-mO6" userLabel="WaterTower Bustime Label">
+                                <rect key="frame" x="0.0" y="85" width="600" height="33"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="5AN-cG-RlR"/>
+                                    <constraint firstAttribute="height" constant="66" id="OIH-Ze-8VA"/>
+                                    <constraint firstAttribute="height" constant="33" id="SLb-iT-Ywc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5AN-cG-RlR"/>
+                                        <exclude reference="OIH-Ze-8VA"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="txI-Va-Sb8" firstAttribute="top" secondItem="kPO-eU-mO6" secondAttribute="bottom" constant="14" id="1aB-3s-70t"/>
+                            <constraint firstItem="64C-IJ-asQ" firstAttribute="leading" secondItem="txI-Va-Sb8" secondAttribute="trailing" constant="8" id="26I-9j-DZO"/>
+                            <constraint firstItem="kPO-eU-mO6" firstAttribute="top" secondItem="gij-no-7Zo" secondAttribute="bottom" constant="6" id="3aL-b2-oRm"/>
+                            <constraint firstItem="Nf4-37-oiZ" firstAttribute="top" secondItem="qZ1-qu-PUh" secondAttribute="bottom" constant="417" id="5BT-YK-NQa"/>
+                            <constraint firstItem="txI-Va-Sb8" firstAttribute="top" secondItem="kPO-eU-mO6" secondAttribute="bottom" constant="39" id="5PP-F5-IQk"/>
+                            <constraint firstItem="kPO-eU-mO6" firstAttribute="top" secondItem="gij-no-7Zo" secondAttribute="bottom" id="ACH-mk-bJG"/>
+                            <constraint firstItem="kPO-eU-mO6" firstAttribute="leading" secondItem="7V6-HE-vGr" secondAttribute="leadingMargin" constant="183" id="AKt-mH-c4f"/>
+                            <constraint firstItem="64C-IJ-asQ" firstAttribute="bottom" secondItem="qZ1-qu-PUh" secondAttribute="bottom" id="B0v-pp-9DV"/>
+                            <constraint firstItem="gij-no-7Zo" firstAttribute="trailing" secondItem="kPO-eU-mO6" secondAttribute="trailing" id="CZC-aX-5Ze"/>
+                            <constraint firstItem="kPO-eU-mO6" firstAttribute="leading" secondItem="7V6-HE-vGr" secondAttribute="leadingMargin" constant="151" id="DqW-mL-uZ1"/>
+                            <constraint firstItem="gij-no-7Zo" firstAttribute="leading" secondItem="7V6-HE-vGr" secondAttribute="leading" id="E9L-Cj-hj0"/>
+                            <constraint firstItem="txI-Va-Sb8" firstAttribute="leading" secondItem="7V6-HE-vGr" secondAttribute="leadingMargin" constant="-20" id="EVA-bI-P7X"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kPO-eU-mO6" secondAttribute="trailing" constant="66" id="G93-Dn-OUs"/>
+                            <constraint firstItem="txI-Va-Sb8" firstAttribute="firstBaseline" secondItem="qZ1-qu-PUh" secondAttribute="firstBaseline" id="GDM-Xp-qzq"/>
+                            <constraint firstItem="kPO-eU-mO6" firstAttribute="leading" secondItem="7V6-HE-vGr" secondAttribute="leadingMargin" constant="73" id="I0d-qB-8aM"/>
+                            <constraint firstItem="txI-Va-Sb8" firstAttribute="leading" secondItem="7V6-HE-vGr" secondAttribute="leadingMargin" constant="123" id="KgW-Xk-wJQ"/>
+                            <constraint firstItem="64C-IJ-asQ" firstAttribute="leading" secondItem="txI-Va-Sb8" secondAttribute="trailing" constant="8" symbolic="YES" id="MLb-Sv-5No"/>
+                            <constraint firstItem="kPO-eU-mO6" firstAttribute="top" secondItem="gij-no-7Zo" secondAttribute="bottom" constant="6" id="N3e-Cc-e0T"/>
+                            <constraint firstItem="qZ1-qu-PUh" firstAttribute="trailing" secondItem="kPO-eU-mO6" secondAttribute="trailing" id="PiA-Av-sYR"/>
+                            <constraint firstItem="kPO-eU-mO6" firstAttribute="top" secondItem="gij-no-7Zo" secondAttribute="bottom" constant="6" id="RnU-Y6-SWR"/>
+                            <constraint firstItem="txI-Va-Sb8" firstAttribute="baseline" secondItem="qZ1-qu-PUh" secondAttribute="baseline" id="Rzu-JG-ED8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qZ1-qu-PUh" secondAttribute="trailing" constant="131" id="Tlv-zP-vH1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kPO-eU-mO6" secondAttribute="trailing" constant="184" id="Tw7-t6-Q8j"/>
+                            <constraint firstItem="qZ1-qu-PUh" firstAttribute="top" secondItem="kPO-eU-mO6" secondAttribute="bottom" constant="29" id="Ulg-4e-aWY"/>
+                            <constraint firstItem="kPO-eU-mO6" firstAttribute="top" secondItem="gij-no-7Zo" secondAttribute="bottom" id="Vwy-bs-4ic"/>
+                            <constraint firstItem="kPO-eU-mO6" firstAttribute="leading" secondItem="7V6-HE-vGr" secondAttribute="leadingMargin" constant="-20" id="WnS-xS-tTl"/>
+                            <constraint firstItem="64C-IJ-asQ" firstAttribute="top" secondItem="kPO-eU-mO6" secondAttribute="bottom" constant="14" id="Xgc-So-sG1"/>
+                            <constraint firstItem="kPO-eU-mO6" firstAttribute="top" secondItem="gij-no-7Zo" secondAttribute="bottom" constant="13" id="Yyb-Wp-bbO"/>
+                            <constraint firstItem="Nf4-37-oiZ" firstAttribute="top" secondItem="64C-IJ-asQ" secondAttribute="bottom" constant="417" id="ZG5-1s-kRe"/>
+                            <constraint firstItem="qZ1-qu-PUh" firstAttribute="leading" secondItem="64C-IJ-asQ" secondAttribute="trailing" constant="8" symbolic="YES" id="bcr-SZ-nmk"/>
+                            <constraint firstItem="kPO-eU-mO6" firstAttribute="leading" secondItem="txI-Va-Sb8" secondAttribute="leading" id="fbp-78-bLb"/>
+                            <constraint firstItem="qZ1-qu-PUh" firstAttribute="top" secondItem="kPO-eU-mO6" secondAttribute="bottom" constant="14" id="ghD-yu-5ry"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qZ1-qu-PUh" secondAttribute="trailing" constant="-20" id="hPf-7d-Wsy"/>
+                            <constraint firstItem="qZ1-qu-PUh" firstAttribute="leading" secondItem="64C-IJ-asQ" secondAttribute="trailing" constant="8" id="iha-f6-Pbm"/>
+                            <constraint firstItem="gij-no-7Zo" firstAttribute="top" secondItem="V29-6D-9Ov" secondAttribute="bottom" constant="8" id="jyP-nM-7d7"/>
+                            <constraint firstItem="kPO-eU-mO6" firstAttribute="leading" secondItem="7V6-HE-vGr" secondAttribute="leadingMargin" constant="183" id="oUA-jm-0ZW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kPO-eU-mO6" secondAttribute="trailing" constant="-20" id="od6-fb-wMX"/>
+                            <constraint firstAttribute="trailing" secondItem="gij-no-7Zo" secondAttribute="trailing" id="oqx-oV-A5G"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kPO-eU-mO6" secondAttribute="trailing" constant="152" id="psx-kX-Tbg"/>
+                            <constraint firstItem="64C-IJ-asQ" firstAttribute="top" secondItem="qZ1-qu-PUh" secondAttribute="top" id="sXg-LA-iEN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qZ1-qu-PUh" secondAttribute="trailing" constant="80" id="tVh-Dg-MPq"/>
+                            <constraint firstItem="Nf4-37-oiZ" firstAttribute="top" secondItem="txI-Va-Sb8" secondAttribute="bottom" constant="417" id="x0a-ZK-k5m"/>
+                            <constraint firstItem="gij-no-7Zo" firstAttribute="leading" secondItem="kPO-eU-mO6" secondAttribute="leading" id="yNX-nl-5Qa"/>
+                            <constraint firstItem="kPO-eU-mO6" firstAttribute="centerX" secondItem="64C-IJ-asQ" secondAttribute="centerX" id="ydd-BI-AjL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kPO-eU-mO6" secondAttribute="trailing" constant="184" id="z5v-qS-vBC"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3aL-b2-oRm"/>
+                                <exclude reference="ACH-mk-bJG"/>
+                                <exclude reference="AKt-mH-c4f"/>
+                                <exclude reference="DqW-mL-uZ1"/>
+                                <exclude reference="G93-Dn-OUs"/>
+                                <exclude reference="I0d-qB-8aM"/>
+                                <exclude reference="N3e-Cc-e0T"/>
+                                <exclude reference="RnU-Y6-SWR"/>
+                                <exclude reference="Tw7-t6-Q8j"/>
+                                <exclude reference="Vwy-bs-4ic"/>
+                                <exclude reference="WnS-xS-tTl"/>
+                                <exclude reference="oUA-jm-0ZW"/>
+                                <exclude reference="od6-fb-wMX"/>
+                                <exclude reference="psx-kX-Tbg"/>
+                                <exclude reference="z5v-qS-vBC"/>
+                                <exclude reference="1aB-3s-70t"/>
+                                <exclude reference="EVA-bI-P7X"/>
+                                <exclude reference="KgW-Xk-wJQ"/>
+                                <exclude reference="26I-9j-DZO"/>
+                                <exclude reference="Xgc-So-sG1"/>
+                                <exclude reference="Tlv-zP-vH1"/>
+                                <exclude reference="Ulg-4e-aWY"/>
+                                <exclude reference="ghD-yu-5ry"/>
+                                <exclude reference="hPf-7d-Wsy"/>
+                                <exclude reference="iha-f6-Pbm"/>
+                                <exclude reference="tVh-Dg-MPq"/>
+                                <exclude reference="5BT-YK-NQa"/>
+                                <exclude reference="ZG5-1s-kRe"/>
+                                <exclude reference="x0a-ZK-k5m"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="WTCBusTime" destination="kPO-eU-mO6" id="e4K-QM-alY"/>
+                        <outlet property="countingDown" destination="64C-IJ-asQ" id="Dyb-fF-Wbd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g4K-lX-BSi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1061" y="826"/>
+            <point key="canvasLocation" x="977" y="619"/>
         </scene>
         <!--Lakeshore Controller-->
         <scene sceneID="HFT-oq-lSy">
@@ -83,13 +268,42 @@
                         <viewControllerLayoutGuide type="top" id="b4G-a2-g4s"/>
                         <viewControllerLayoutGuide type="bottom" id="vu4-v8-CCB"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="avh-OU-NPm">
+                    <view key="view" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" id="avh-OU-NPm">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is lakeshore view. Update with data from model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9L-Us-2iQ">
-                                <rect key="frame" x="102" y="185" width="397" height="21"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Qf-mg-N8j">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="7uw-M9-MMu"/>
+                                    <constraint firstAttribute="height" constant="44" id="tKg-sn-gS0"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Lake Shore  Schedule" id="SGG-sZ-2UD">
+                                        <barButtonItem key="backBarButtonItem" title="Home" width="72" id="dpl-lI-n91">
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7uw-M9-MMu"/>
+                                    </mask>
+                                </variation>
+                            </navigationBar>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="57B-pv-fYx">
+                                <rect key="frame" x="53" y="166" width="494" height="2"/>
+                                <animations/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="                   Lake Shore View " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9L-Us-2iQ" userLabel="LakeShoreBustime Label">
+                                <rect key="frame" x="3" y="64" width="600" height="66"/>
+                                <animations/>
+                                <accessibility key="accessibilityConfiguration" label=""/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="40H-gl-mVA"/>
+                                    <constraint firstAttribute="width" constant="600" id="Ed4-dT-KTX"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -97,11 +311,24 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0Qf-mg-N8j" firstAttribute="leading" secondItem="avh-OU-NPm" secondAttribute="leading" id="9x0-Ce-rgy"/>
+                            <constraint firstItem="m9L-Us-2iQ" firstAttribute="top" secondItem="0Qf-mg-N8j" secondAttribute="bottom" id="F51-MJ-6eg"/>
+                            <constraint firstItem="0Qf-mg-N8j" firstAttribute="top" secondItem="b4G-a2-g4s" secondAttribute="bottom" id="GB0-gS-HXi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="57B-pv-fYx" secondAttribute="trailing" constant="33" id="Kpk-Md-EPp"/>
+                            <constraint firstAttribute="trailing" secondItem="0Qf-mg-N8j" secondAttribute="trailing" id="SGB-4b-HFX"/>
+                            <constraint firstItem="57B-pv-fYx" firstAttribute="leading" secondItem="avh-OU-NPm" secondAttribute="leadingMargin" constant="33" id="khN-Pa-Ega"/>
+                            <constraint firstItem="m9L-Us-2iQ" firstAttribute="leading" secondItem="avh-OU-NPm" secondAttribute="leadingMargin" constant="-17" id="mUy-9q-lzu"/>
+                            <constraint firstItem="57B-pv-fYx" firstAttribute="top" secondItem="m9L-Us-2iQ" secondAttribute="bottom" constant="36" id="mms-UP-LVI"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="BustimeLabel" destination="m9L-Us-2iQ" id="OiZ-so-car"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9bH-Wp-qQW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1237" y="-173"/>
+            <point key="canvasLocation" x="977" y="-48"/>
         </scene>
     </scenes>
 </document>

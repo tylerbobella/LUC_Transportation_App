@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet var campuses: [UIButton]!
+    
 
 
     @IBAction func chooseCampus(sender: AnyObject) {
