@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		052D981B6D106DDD8B233BDD /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4818211612084566851AE1B4 /* Pods.framework */; };
+		D1814EE31C16456900CE8F9E /* sharedCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1814EE21C16456900CE8F9E /* sharedCode.swift */; };
 		EF67D99C1BF57D17003E898C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF67D99B1BF57D17003E898C /* AppDelegate.swift */; };
 		EF67D99E1BF57D17003E898C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF67D99D1BF57D17003E898C /* ViewController.swift */; };
 		EF67D9A11BF57D17003E898C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF67D99F1BF57D17003E898C /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		4F72E08CD73EBE086C1E6820 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		721989A11EFF17DB08FD7710 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D11E82CF1C0CD92B00BABDF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		D1814EE21C16456900CE8F9E /* sharedCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sharedCode.swift; sourceTree = "<group>"; };
 		EF67D9981BF57D17003E898C /* RamblerRides.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RamblerRides.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF67D99B1BF57D17003E898C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF67D99D1BF57D17003E898C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				EF67D9CD1BF58D9A003E898C /* WatertowerController.swift */,
 				EF9F0A321BF83B430053E36D /* CTA.swift */,
 				EF9F0A341BF840EE0053E36D /* RamblerRides-Bridging-Header.h */,
+				D1814EE21C16456900CE8F9E /* sharedCode.swift */,
 			);
 			path = RamblerRides;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				TargetAttributes = {
 					EF67D9971BF57D17003E898C = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = NDA6SX8WLX;
 					};
 					EF67D9AB1BF57D17003E898C = {
 						CreatedOnToolsVersion = 7.0;
@@ -347,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF67D99E1BF57D17003E898C /* ViewController.swift in Sources */,
+				D1814EE31C16456900CE8F9E /* sharedCode.swift in Sources */,
 				EF67D9CE1BF58D9A003E898C /* WatertowerController.swift in Sources */,
 				EF9F0A331BF83B430053E36D /* CTA.swift in Sources */,
 				EF67D99C1BF57D17003E898C /* AppDelegate.swift in Sources */,
@@ -493,10 +498,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RamblerRides/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LUCCS.RamblerRides;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RamblerRides/RamblerRides-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -508,10 +516,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RamblerRides/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LUCCS.RamblerRides;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RamblerRides/RamblerRides-Bridging-Header.h";
 			};
 			name = Release;
