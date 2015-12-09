@@ -11,10 +11,10 @@ import UIKit
 class WatertowerController: UIViewController {
 
         let cta = CTA()
-    
+   
     var timer = NSTimer()
     let timeInterval:NSTimeInterval = 0.01
-    let timerEnd:NSTimeInterval = 10.0
+    let timerEnd:NSTimeInterval = 0.01
     let currentDate = NSDate()
     var timeCount:NSTimeInterval = 5.0
     let scenario0: NSTimeInterval = 900
@@ -26,12 +26,20 @@ class WatertowerController: UIViewController {
     
     @IBOutlet weak var WTCBusTime: UILabel!
     @IBOutlet weak var countingDown: UISwitch!
+    @IBOutlet weak var WTCOutbound: UILabel!
+    @IBOutlet weak var WTCInbound: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         cta.getTrain("watertower") { response, error in
             print(response)
+            //var dictionary = [String: String]()
+            //var populatedDic = ["response"]
+            var res = response! as NSDictionary
+           // print (res["InboundTrain"]["TimeStamp"])
+//            self.WTCOutbound.text = "To Howard: " + response.InboundTrain.tmst
+//            self.WTCInbound.text = "To 95th: " + String(response)
         }
         changeTime()
         startTimer()
@@ -80,8 +88,6 @@ class WatertowerController: UIViewController {
     }
     
     func resetTimeCount(){
-        stopTimer()
-        timerScenario()
         changeTime()
         startTimer()
     }
@@ -97,29 +103,26 @@ class WatertowerController: UIViewController {
     // THIS SECTION IS THE TESTS TO SEE WHAT COUNTDOWN TIMER TO USE //
     
     func timerScenario() -> Int{
-        if currentDate.hour() < 7 && currentDate.hour() > 8 {
+        if currentDate.hour() < 7 && currentDate.hour() > 1 {
             return 6
         }
-        else if currentDate.minute() >= 0 && currentDate.minute() < 15  {
+        else if currentDate.minute() > 0 && currentDate.minute() <= 15  {
             return 0
         }
-        else if currentDate.minute() >= 15 && currentDate.minute() < 20  {
+        else if currentDate.minute() > 15 && currentDate.minute() <= 20  {
             return 1
         }
-       else if currentDate.minute() >= 20 && currentDate.minute() < 35  {
+       else if currentDate.minute() > 20 && currentDate.minute() <= 35  {
             return 2
         }
-        else if currentDate.minute() >= 35 && currentDate.minute() < 40  {
+        else if currentDate.minute() > 35 && currentDate.minute() <= 40  {
             return 3
         }
-        else if currentDate.minute() >= 40 && currentDate.minute() < 55  {
+        else if currentDate.minute() > 40 && currentDate.minute() <= 55  {
             return 4
         }
-        else if currentDate.minute() >= 55 && currentDate.minute() < 60  {
+        else if currentDate.minute() > 55 && currentDate.minute() <= 60  {
             return 5
-        }
-        else if currentDate.hour() < 7 && currentDate.hour() > 1 {
-            return 6
         }
         return 7
     }

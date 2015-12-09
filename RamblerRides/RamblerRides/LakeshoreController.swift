@@ -10,7 +10,7 @@ import UIKit
 
 class LakeshoreController: UIViewController {
     
-    let cta = CTA()
+   /* let cta = CTA()
     
     @IBOutlet weak var BustimeLabel: UILabel!
     var count = 10
@@ -24,11 +24,12 @@ class LakeshoreController: UIViewController {
         var clock = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
     }
     
-    func update() {
+/*func update() {
         if(count >= 0)
         {
             BustimeLabel.text = String ("You're bus will arrive in:  ") + String(count--)
         }
     
-    }
+    }*/
+*/
 }
