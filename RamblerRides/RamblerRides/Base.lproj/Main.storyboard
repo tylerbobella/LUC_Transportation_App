@@ -393,24 +393,6 @@
                                     </mask>
                                 </variation>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" text="buscountdown view" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wT2-OF-M09" userLabel="WaterTower Bustime Label">
-                                <rect key="frame" x="0.0" y="83" width="600" height="33"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="600" id="PNt-UB-RkK"/>
-                                    <constraint firstAttribute="height" constant="66" id="XWm-Dc-EhG"/>
-                                    <constraint firstAttribute="height" constant="33" id="eL3-eo-LSp"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
-                                <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="PNt-UB-RkK"/>
-                                        <exclude reference="XWm-Dc-EhG"/>
-                                    </mask>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bus Leaving soon" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Fn-gO-8fe">
                                 <rect key="frame" x="0.0" y="140" width="268" height="31"/>
                                 <animations/>
@@ -433,6 +415,7 @@
                                 <animations/>
                                 <color key="onTintColor" red="1" green="0.86713505840000005" blue="0.4352989129" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
+                                    <action selector="countingDown:" destination="ue0-at-RM4" eventType="valueChanged" id="hir-ba-BJh"/>
                                     <action selector="countingDown:" destination="n7a-Rr-cBX" eventType="valueChanged" id="qDx-Ed-102"/>
                                 </connections>
                             </switch>
@@ -467,6 +450,24 @@
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" text="buscountdown view" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wT2-OF-M09" userLabel="WaterTower Bustime Label">
+                                <rect key="frame" x="0.0" y="83" width="600" height="33"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="PNt-UB-RkK"/>
+                                    <constraint firstAttribute="height" constant="66" id="XWm-Dc-EhG"/>
+                                    <constraint firstAttribute="height" constant="33" id="eL3-eo-LSp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
+                                <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="PNt-UB-RkK"/>
+                                        <exclude reference="XWm-Dc-EhG"/>
+                                    </mask>
+                                </variation>
                             </label>
                         </subviews>
                         <animations/>
@@ -535,6 +536,12 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="LSCBusTime" destination="wT2-OF-M09" id="vkG-gj-vKy"/>
+                        <outlet property="LSCInbound" destination="Gbz-ei-57M" id="WcR-AK-GHo"/>
+                        <outlet property="LSCOutbound" destination="rRs-Yi-oeU" id="ifk-sN-ubb"/>
+                        <outlet property="countingDown" destination="6dc-wl-izo" id="y7L-En-mpJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9bH-Wp-qQW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -545,6 +552,6 @@
         <image name="luc_log" width="445" height="541"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="RgK-ln-BAr"/>
+        <segue reference="XMb-ZV-0pc"/>
     </inferredMetricsTieBreakers>
 </document>
