@@ -5,17 +5,18 @@
 //  Created by Tyler Bobella on 11/12/15.
 //  Copyright © 2015 LUCCS. All rights reserved.
 //
+//  We were unable to get the API for the Loyola Shuttle data, so we created our own countdown timer based on the published schedule.
 
 import UIKit
 
 class WatertowerController: UIViewController {
 
-        let cta = CTA()
+    let cta = CTA()
    
     var timer = NSTimer()
     let timeInterval:NSTimeInterval = 0.01
     let timerEnd:NSTimeInterval = 0.01
-    let currentDate = NSDate()
+    var currentDate = NSDate()
     var timeCount:NSTimeInterval = 5.0
     let scenario0: NSTimeInterval = 900
     let scenario1: NSTimeInterval = 1200
@@ -23,6 +24,8 @@ class WatertowerController: UIViewController {
     let scenario3: NSTimeInterval = 3000
     let scenario4: NSTimeInterval = 3300
     let scenario5: NSTimeInterval = 3600
+    var wtcInbound = [String : String]()
+    var wtcOutbound = [String : String]()
     
     @IBOutlet weak var WTCBusTime: UILabel!
     @IBOutlet weak var countingDown: UISwitch!
@@ -33,16 +36,32 @@ class WatertowerController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         cta.getTrain("watertower") { response, error in
-            print(response)
-            //var dictionary = [String: String]()
-            //var populatedDic = ["response"]
-            var res = response! as NSDictionary
-           // print (res["InboundTrain"]["TimeStamp"])
-//            self.WTCOutbound.text = "To Howard: " + response.InboundTrain.tmst
-//            self.WTCInbound.text = "To 95th: " + String(response)
+            if let inbound = response?.valueForKey("InboundTrain") {
+                for (k, v) in (inbound as? [String : AnyObject])! {
+                    self.wtcInbound[k] = v as? String
+                }
+            }
+            
+            if let outbound = response?.valueForKey("OutboundTrain") {
+                for (k, v) in (outbound as? [String : AnyObject])! {
+                    self.wtcOutbound[k] = v as? String
+                }
+            }
+            
+            self.WTCInbound.text = "To 95th: " + self.arrivalTime(self.wtcInbound)
+            self.WTCOutbound.text = "To Howard: " + self.arrivalTime(self.wtcOutbound)
+            self.changeTime()
+            self.startTimer()
         }
-        changeTime()
-        startTimer()
+       
+    }
+    
+    func arrivalTime(dictValue: [String: String]) -> String {
+        if let arrival = dictValue["prdt"] {
+            let endIdx = arrival.endIndex.advancedBy(-8)
+            return arrival.substringFromIndex(endIdx)
+        }
+        return ""
     }
     
     func startTimer() {
@@ -88,8 +107,12 @@ class WatertowerController: UIViewController {
     }
     
     func resetTimeCount(){
+        currentDate = NSDate()
+        stopTimer()
+        timerScenario()
         changeTime()
         startTimer()
+       // self.WTCBusTime.text = timeString(timeCount)
     }
     
     func timeString(time:NSTimeInterval) -> String {
