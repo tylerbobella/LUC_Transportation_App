@@ -48,12 +48,21 @@ class WatertowerController: UIViewController {
                 }
             }
             
-            self.WTCInbound.text = "To 95th: " + self.arrivalTime(self.wtcInbound)
-            self.WTCOutbound.text = "To Howard: " + self.arrivalTime(self.wtcOutbound)
+            self.WTCInbound.text = "To 95th: " + self.timeConvert (self.arrivalTime(self.wtcInbound))
+            self.WTCOutbound.text = "To Howard: " + self.timeConvert (self.arrivalTime(self.wtcOutbound))
             self.changeTime()
             self.startTimer()
         }
        
+    }
+    
+    func timeConvert(milTime: String) -> String {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "HH:mm:ss"
+        let date = dateFormatter.dateFromString(milTime)
+        dateFormatter.dateFormat = "h:mm a"
+        let stanDate = dateFormatter.stringFromDate(date!)
+        return stanDate
     }
     
     func arrivalTime(dictValue: [String: String]) -> String {
@@ -112,7 +121,6 @@ class WatertowerController: UIViewController {
         timerScenario()
         changeTime()
         startTimer()
-       // self.WTCBusTime.text = timeString(timeCount)
     }
     
     func timeString(time:NSTimeInterval) -> String {
