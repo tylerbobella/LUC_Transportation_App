@@ -12,7 +12,7 @@ import PromiseKit
 
 class CTA: NSObject, NSXMLParserDelegate {
 
-    let trainApiKey = "YOUR_API_KEY_HERE"
+    let trainApiKey = "8216f1d5ea9d40d58bb9e44d8fd94630"
     let loyolaLSCRInbound = "30252"
     let loyolaLSCROutbound = "30251"
     let loyolaWTCInbound = "30279"
